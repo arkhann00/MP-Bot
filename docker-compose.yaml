@@ -1,0 +1,14 @@
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mp_bot
+    env_file:
+      - .env           # BOT_TOKEN и т.п.
+    environment:
+      TZ: Europe/Moscow
+    restart: unless-stopped
+    # для разработки можно раскомментировать, чтобы правки подтягивались без пересборки
+    # volumes:
+    #   - ./src:/app/src
