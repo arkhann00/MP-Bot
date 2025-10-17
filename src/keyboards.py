@@ -2,8 +2,7 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeybo
 
 def main_keyboard():
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="Карта МП 🗺️", callback_data="map"),]
-         # InlineKeyboardButton(text="Ближайшие события 🔥", callback_data="events")],
+        [InlineKeyboardButton(text="Карта МП 🗺️", callback_data="map")],
         [InlineKeyboardButton(text="Вступить в МП ⚡️",
                               url="https://forms.gle/DEYmN5mJfHeH6XpU8")],
     ], resize_keyboard=True)
