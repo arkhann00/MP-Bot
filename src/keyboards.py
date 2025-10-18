@@ -1,8 +1,10 @@
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton, WebAppInfo
+
 
 def main_keyboard():
+    map_mini_app = "https://map.moepokolenie.ru/"
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="Карта МП 🗺️", callback_data="map")],
+        [InlineKeyboardButton(text="Карта МП 🗺️", web_app=WebAppInfo(url=map_mini_app))],
         [InlineKeyboardButton(text="Вступить в МП ⚡️",
                               url="https://forms.gle/DEYmN5mJfHeH6XpU8")],
     ], resize_keyboard=True)
